@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿class Player
+{
+    public int health = 20;
+}
+
+class Goblin
+{
+    public int health = 12;
+}
