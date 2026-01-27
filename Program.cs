@@ -1,6 +1,9 @@
 ﻿Goblin goblin = new Goblin();
 Player player = new Player();
 
+Random moveSelector = new Random();
+int num = moveSelector.Next(3);
+
 Console.WriteLine($"Goblin HP: {goblin.health}");
 Console.WriteLine($"Player HP: {player.health}");
 
