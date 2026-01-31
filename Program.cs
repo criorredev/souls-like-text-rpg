@@ -8,7 +8,7 @@ class Player
 class Goblin
 {
     public int health = 12;
-    public string[] moves = {"slash", "pierce", "dodge"};
+    public string[] moves = { "slash", "pierce", "dodge" };
 }
 
 class Program
@@ -16,11 +16,11 @@ class Program
     static void Main()
     {
         Goblin goblin = new Goblin();
-		Player player = new Player();
+        Player player = new Player();
 
-		Random moveSelector = new Random();
-		int num = moveSelector.Next(3);
-		string goblinMove = goblin.moves[num];
+        Random moveSelector = new Random();
+        int num = moveSelector.Next(3);
+        string goblinMove = goblin.moves[num];
 
         while (player.health >= 0 && goblin.health >= 0)
         {
