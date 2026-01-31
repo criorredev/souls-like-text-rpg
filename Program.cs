@@ -1,13 +1,4 @@
-﻿Goblin goblin = new Goblin();
-Player player = new Player();
-
-Random moveSelector = new Random();
-int num = moveSelector.Next(3);
-string goblinMove = goblin.moves[num];
-
-Console.WriteLine($"Goblin HP: {goblin.health}");
-Console.WriteLine($"Player HP: {player.health}");
-Console.WriteLine($"Goblin uses: {goblinMove}");
+﻿using System;
 
 class Player
 {
@@ -18,4 +9,24 @@ class Goblin
 {
     public int health = 12;
     public string[] moves = {"slash", "pierce", "dodge"};
+}
+
+class Program
+{
+    static void Main()
+    {
+        Goblin goblin = new Goblin();
+		Player player = new Player();
+
+		Random moveSelector = new Random();
+		int num = moveSelector.Next(3);
+		string goblinMove = goblin.moves[num];
+
+        while (player.health >= 0 && goblin.health >= 0)
+        {
+            Console.WriteLine($"Goblin HP: {goblin.health}");
+            Console.WriteLine($"Player HP: {player.health}");
+            Console.WriteLine($"Goblin uses: {goblinMove}");
+        }
+    }
 }
