@@ -1,7 +1,4 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-
-class Player
+﻿class Player
 {
     public int health = 20;
     public string[] moves = ["slash", "block", "push"];
