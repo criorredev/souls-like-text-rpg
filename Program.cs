@@ -4,12 +4,14 @@ using System.Runtime.CompilerServices;
 class Player
 {
     public int health = 20;
+    public string[] moves = ["slash", "block", "push"];
+
 }
 
 class Goblin
 {
     public int health = 12;
-    public string[] moves = { "slash", "pierce", "dodge" };
+    public string[] moves = ["slash", "pierce", "dodge"];
 }
 
 class Program
@@ -20,14 +22,28 @@ class Program
         Player player = new();
 
         Random moveSelector = new();
-        int num = moveSelector.Next(3);
-        string goblinMove = goblin.moves[num];
 
-        while (player.health >= 0 && goblin.health >= 0)
+        while (player.health > 0 && goblin.health > 0)
         {
+            int num = moveSelector.Next(3);
+            string goblinMove = goblin.moves[num];
+
+            Console.WriteLine();
+
             Console.WriteLine($"Goblin HP: {goblin.health}");
             Console.WriteLine($"Player HP: {player.health}");
-            Console.WriteLine($"Goblin uses: {goblinMove}");
+            Console.WriteLine($"Goblin intent: {goblinMove}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("CHOOSE A MOVE");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Moves:");
+            Array.ForEach(player.moves, Console.WriteLine);
+
+            Console.ReadLine();
         }
     }
 }
