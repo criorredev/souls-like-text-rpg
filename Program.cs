@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 class Player
 {
@@ -15,10 +16,10 @@ class Program
 {
     static void Main()
     {
-        Goblin goblin = new Goblin();
-        Player player = new Player();
+        Goblin goblin = new();
+        Player player = new();
 
-        Random moveSelector = new Random();
+        Random moveSelector = new();
         int num = moveSelector.Next(3);
         string goblinMove = goblin.moves[num];
 
