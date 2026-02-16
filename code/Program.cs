@@ -1,15 +1,4 @@
-﻿class Player
-{
-    public int health = 20;
-    public string[] moves = ["slash", "block", "push"];
-
-}
-
-class Goblin
-{
-    public int health = 12;
-    public string[] moves = ["slash", "pierce", "dodge"];
-}
+﻿namespace souls_like_rpg;
 
 class Program
 {
