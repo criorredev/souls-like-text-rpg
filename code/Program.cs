@@ -11,7 +11,7 @@ class Program
 
         while (player.health > 0 && goblin.health > 0)
         {
-            int num = moveSelector.Next(3);
+            int num = moveSelector.Next(2);
             string goblinMove = goblin.moves[num];
 
             Console.WriteLine();
@@ -29,9 +29,19 @@ class Program
             Console.WriteLine("Moves:");
             Array.ForEach(player.moves, Console.WriteLine);
 
-            Console.ReadLine();
+            string input = Console.ReadLine()!;
+            input = input.ToLower();
 
-            
+            if (input == "slash")
+            {
+                Console.WriteLine();
+                Console.WriteLine("Slash chosen!");
+            }
+            else if (input == "block")
+            {
+                Console.WriteLine();
+                Console.WriteLine("Block chosen!");
+            }
         }
     }
 }
