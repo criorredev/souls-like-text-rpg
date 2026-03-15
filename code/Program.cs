@@ -30,6 +30,8 @@ class Program
             Array.ForEach(player.moves, Console.WriteLine);
 
             Console.ReadLine();
+
+            
         }
     }
 }
